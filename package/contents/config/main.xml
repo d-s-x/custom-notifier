@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <kcfgfile name=""/>
+
+    <group name="General">
+        <entry name="startTimeout" type="Int">
+            <default>60</default>
+        </entry>
+        <entry name="cycleTimeout" type="Int">
+            <default>3600</default>
+        </entry>
+         <entry name="chkCommand" type="String">
+            <default></default>
+        </entry>
+        <entry name="updCommand" type="String">
+            <default></default>
+        </entry>  
+        <entry name="useDefaultIcons" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="iconNoUpdate" type="String">
+            <default>../images/noupdate.svg</default>
+        </entry>
+        <entry name="iconUpdate" type="String">
+            <default>../images/update.svg</default>
+        </entry>
+        <entry name="iconError" type="String">
+            <default>../images/error.svg</default>
+        </entry>
+    </group>
+</kcfg>

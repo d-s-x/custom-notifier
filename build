@@ -1,0 +1,25 @@
+#!/bin/bash
+# Version 8
+
+
+### Variables
+packageNamespace=$(kreadconfig5 --file="$PWD/package/metadata.desktop" --group="Desktop Entry" --key="X-KDE-PluginInfo-Name")
+packageName="${packageNamespace##*.}" # Strip namespace (Eg: "org.kde.plasma.")
+packageVersion=$(kreadconfig5 --file="$PWD/package/metadata.desktop" --group="Desktop Entry" --key="X-KDE-PluginInfo-Version")
+#packageAuthor=$(kreadconfig5 --file="$PWD/package/metadata.desktop" --group="Desktop Entry" --key="X-KDE-PluginInfo-Author")
+#packageAuthorEmail=$(kreadconfig5 --file="$PWD/package/metadata.desktop" --group="Desktop Entry" --key="X-KDE-PluginInfo-Email")
+#packageWebsite=$(kreadconfig5 --file="$PWD/package/metadata.desktop" --group="Desktop Entry" --key="X-KDE-PluginInfo-Website")
+#packageComment=$(kreadconfig5 --file="$PWD/package/metadata.desktop" --group="Desktop Entry" --key="Comment")
+
+
+### *.plasmoid
+filename="${packageName}-${packageVersion}.plasmoid"
+rm ${packageName}-v*.plasmoid # Cleanup
+(cd package \
+	&& zip -r $filename * \
+	&& mv $filename ../$filename \
+)
+
+echo "[plasmoid] md5: $(md5sum $filename | awk '{ print $1 }')"
+echo "[plasmoid] sha256: $(sha256sum $filename | awk '{ print $1 }')"
+

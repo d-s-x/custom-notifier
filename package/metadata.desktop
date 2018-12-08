@@ -1,0 +1,19 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Custom Notifier
+Comment=Update your system with custom scripts
+Type=Service
+Icon=system-software-update
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=yaute
+X-KDE-PluginInfo-Email=yaute74@gmail.com
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=org.kde.plasma.custom-notifier
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=https://gitlab.com/yaute74/custom-notifier.git
+X-KDE-ServiceTypes=Plasma/Applet
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
+X-KDE-PluginInfo-Category=System update
+X-Plasma-NotificationArea=true
+X-Plasma-NotificationAreaCategory=SystemServices
