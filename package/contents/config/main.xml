@@ -10,7 +10,7 @@
             <default>60</default>
         </entry>
         <entry name="cycleTimeout" type="Int">
-            <default>3600</default>
+            <default>10800</default>
         </entry>
          <entry name="chkCommand" type="String">
             <default></default>

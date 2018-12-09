@@ -12,9 +12,16 @@ packageVersion=$(kreadconfig5 --file="$PWD/package/metadata.desktop" --group="De
 #packageComment=$(kreadconfig5 --file="$PWD/package/metadata.desktop" --group="Desktop Entry" --key="Comment")
 
 
+find package/ -name *.qmlc -exec rm {} \;
+
 ### *.plasmoid
 filename="${packageName}-${packageVersion}.plasmoid"
-rm ${packageName}-v*.plasmoid # Cleanup
+
+if [ -f ${filename} ]
+then
+	rm ${filename} # Cleanup
+fi
+
 (cd package \
 	&& zip -r $filename * \
 	&& mv $filename ../$filename \

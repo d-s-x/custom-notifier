@@ -123,5 +123,10 @@ Item {
             onIconChanged: cfg_iconError = iconName
             enabled: !useDefaultIcons.checked
         }
+        
+        
+        LinkText {
+            text: '<a href="https://gitlab.com/yaute74/custom-notifier.git">'+i18n("Help")+'</a>'
+        }
     }
 }
