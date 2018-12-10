@@ -20,6 +20,8 @@ import QtQuick.Layouts 1.1
 
 Item {
 
+	//showAppletVersion: true
+	
     property alias cfg_startTimeout:    startTimeout.value
     property alias cfg_cycleTimeout:    cycleTimeout.value
     property alias cfg_chkCommand:      chkCommand.text
@@ -29,15 +31,31 @@ Item {
     property string cfg_iconUpdate:   plasmoid.configuration.iconUpdate
     property string cfg_iconError:      plasmoid.configuration.iconError
 
-    Label {
-        text: i18n('Plasmoid version') + ': 1.0.1'
-        anchors.right: parent.right
-    }
 
+	
     GridLayout {
         Layout.fillWidth: true
         columns: 2
         
+        Label {
+			text: i18n('Plasmoid version') + ': 1.0'
+			font.bold: true
+			Layout.alignment: Qt.AlignRight
+		}
+
+		Label {
+			text: '<a href="https://gitlab.com/yaute74/custom-notifier.git">'+i18n("Help")+'</a>'
+			linkColor: PlasmaCore.ColorScope.highlightColor
+			onLinkActivated: Qt.openUrlExternally(link)
+			MouseArea {
+				anchors.fill: parent
+				acceptedButtons: Qt.NoButton // we don't want to eat clicks on the Text
+				cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+			}
+		}
+
+		
+		
         Label {
             text: i18n("Timeout before first check (sec)")
             Layout.alignment: Qt.AlignRight
@@ -122,11 +140,6 @@ Item {
             defaultIcon: '../images/error.svg'
             onIconChanged: cfg_iconError = iconName
             enabled: !useDefaultIcons.checked
-        }
-        
-        
-        LinkText {
-            text: '<a href="https://gitlab.com/yaute74/custom-notifier.git">'+i18n("Help")+'</a>'
         }
     }
 }

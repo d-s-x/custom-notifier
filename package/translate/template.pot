@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://gitlab.com/yaute74/custom-notifier.git/issues\n"
-"POT-Creation-Date: 2018-12-08 21:00+0100\n"
+"POT-Creation-Date: 2018-12-10 20:11+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,55 +21,58 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: ../package/contents/ui/ConfigGeneral.qml:33
-msgid "Plasmoid version"
-msgstr ""
-
-#: ../package/contents/ui/ConfigGeneral.qml:42
+#: ../package/contents/ui/ConfigGeneral.qml:44
 msgid "Timeout before first check (sec)"
 msgstr ""
 
-#: ../package/contents/ui/ConfigGeneral.qml:54
+#: ../package/contents/ui/ConfigGeneral.qml:56
 msgid "Timeout between each checks (sec)"
 msgstr ""
 
-#: ../package/contents/ui/ConfigGeneral.qml:66
+#: ../package/contents/ui/ConfigGeneral.qml:68
 msgid "Script to check updates:"
 msgstr ""
 
-#: ../package/contents/ui/ConfigGeneral.qml:71
-#: ../package/contents/ui/ConfigGeneral.qml:81
+#: ../package/contents/ui/ConfigGeneral.qml:73
+#: ../package/contents/ui/ConfigGeneral.qml:83
 msgid "[Script path]"
 msgstr ""
 
-#: ../package/contents/ui/ConfigGeneral.qml:76
+#: ../package/contents/ui/ConfigGeneral.qml:78
 msgid "Script to update:"
 msgstr ""
 
-#: ../package/contents/ui/ConfigGeneral.qml:87
+#: ../package/contents/ui/ConfigGeneral.qml:89
 msgid "Use default icons"
 msgstr ""
 
-#: ../package/contents/ui/ConfigGeneral.qml:92
-#: ../package/contents/ui/main.qml:57
+#: ../package/contents/ui/ConfigGeneral.qml:94
+#: ../package/contents/ui/main.qml:61
 msgid "System up to date"
 msgstr ""
 
-#: ../package/contents/ui/ConfigGeneral.qml:104
-#: ../package/contents/ui/main.qml:53
+#: ../package/contents/ui/ConfigGeneral.qml:106
 msgid "Updates available"
 msgstr ""
 
-#: ../package/contents/ui/ConfigGeneral.qml:116
-#: ../package/contents/ui/main.qml:63 ../package/contents/ui/main.qml:67
+#: ../package/contents/ui/ConfigGeneral.qml:118
+#: ../package/contents/ui/main.qml:71
 msgid "Script in error"
 msgstr ""
 
-#: ../package/contents/ui/main.qml:131
+#: ../package/contents/ui/ConfigGeneral.qml:131
+msgid "Help"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:135
+msgid "Updates"
+msgstr ""
+
+#: ../package/contents/ui/main.qml:136
 msgid "Looking for updates..."
 msgstr ""
 
-#: ../package/contents/ui/main.qml:145 ../package/contents/ui/main.qml:161
+#: ../package/contents/ui/main.qml:148 ../package/contents/ui/main.qml:164
 msgid "No check script define"
 msgstr ""
 

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+filename=$PWD/package/contents/ui/ConfigGeneral.qml
+packageVersion=$(kreadconfig5 --file="$PWD/package/metadata.desktop" --group="Desktop Entry" --key="X-KDE-PluginInfo-Version")
+
+sed -i "s/Plasmoid version.*/Plasmoid version') + ': $packageVersion'/" $filename
