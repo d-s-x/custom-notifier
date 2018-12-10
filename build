@@ -10,11 +10,13 @@ find package/ -name *.qmlc -exec rm {} \;
 filename="${packageName}-${packageVersion}.plasmoid"
 
 
+rm ${packageName}-*.plasmoid 2>/dev/null
+
 ./setversion
 
 (cd package \
 	&& zip -r $filename * \
-	&& mv $filename ../uploads/$filename \
+	&& mv $filename ../$filename \
 )
 
 echo "[plasmoid] md5: $(md5sum $filename | awk '{ print $1 }')"
