@@ -3,7 +3,7 @@
 cd "$( dirname "${BASH_SOURCE[0]}" )"
 
 NAME="template.pot"
-PODIR=../package/translate/
+PODIR=.
 
 # svn checkout svn://anonsvn.kde.org/home/kde/trunk/l10n-kf5/scripts
 export PATH=./scripts:$PATH
