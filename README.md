@@ -55,6 +55,13 @@ Plasmoid to be notified of updates with custom scripts.
 
 **ArchLinux**: [plasma5-applets-custom-notifier](https://aur.archlinux.org/packages/plasma5-applets-custom-notifier)
 
+    yay -s plasma-applet-custom-notifier
+    
+    # restart plasmashell
+    killall plasmashell
+    kstart5 plasmashell
+
+
 ----
 ## Configuration
 **Timeout before first check (sec)**
