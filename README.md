@@ -6,19 +6,29 @@ Plasmoid to be notified of updates with custom scripts.
 ## Screenshots
 
 *Configuration*
-![custom-notifier-config](/uploads/-/system/temp/6ae3de380a552162da4c0b0931524fa7/custom-notifier-config.png)
+
+![custom-notifier-config](/uploads/fafd3f9500765aeeb050ce1441047a59/custom-notifier-config.png)
 
 *No update, icon is hide*
-![custom-notifier-noupdate](/uploads/-/system/temp/63ab1cb2e94a8a75574691867a16b6cd/custom-notifier-noupdate.png)
+
+![custom-notifier-noupdate](/uploads/5ace0fdef58a990f2da26abd16aca22c/custom-notifier-noupdate.png)
 
 *Updates availables*
-![custom-notifier-isupdate](/uploads/-/system/temp/4656d5e400c6e6182cb36195f4859ff9/custom-notifier-isupdate.png)
+
+![custom-notifier-isupdate](/uploads/2a68fbae7a2c2e2268f2862c2c5ff486/custom-notifier-isupdate.png)
 
 *Click on icon to start update*
-![custom-notifier-update](/uploads/-/system/temp/f1f516b61855cbe03a04f4b985053820/custom-notifier-update.png)
+
+![custom-notifier-update](/uploads/7b14a8afb631972a73016d401d48ea64/custom-notifier-update.png)
 
 *Check script return an error*
-![custom-notifier-error](/uploads/-/system/temp/6a26eef577bd9905b73f20f702ace9f8/custom-notifier-error.png)
+
+![custom-notifier-error](/uploads/3fbab0484f098680a9bc8a6dacd17042/custom-notifier-error.png)
+
+
+
+
+
 
 
 ----
