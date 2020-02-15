@@ -27,8 +27,9 @@ Item {
     property alias cfg_chkCommand:      chkCommand.text
     property alias cfg_updCommand:      updCommand.text
     property alias cfg_useDefaultIcons: useDefaultIcons.checked
-    property string cfg_iconNoUpdate:     plasmoid.configuration.iconNoUpdate
-    property string cfg_iconUpdate:   plasmoid.configuration.iconUpdate
+    property string cfg_iconChecking:   plasmoid.configuration.iconChecking
+    property string cfg_iconNoUpdate:   plasmoid.configuration.iconNoUpdate
+    property string cfg_iconUpdate:     plasmoid.configuration.iconUpdate
     property string cfg_iconError:      plasmoid.configuration.iconError
 
 
@@ -104,6 +105,18 @@ Item {
             id: useDefaultIcons
             text: i18n('Use default icons')
             Layout.columnSpan: 2
+        }
+        
+        Label {
+            text: i18n("Check in progress")
+            Layout.alignment: Qt.AlignRight
+        }
+
+        IconPicker {
+            currentIcon: cfg_iconChecking
+            defaultIcon: '../images/noupdate.svg'
+            onIconChanged: cfg_iconChecking = iconName
+            enabled: !useDefaultIcons.checked
         }
         
         Label {

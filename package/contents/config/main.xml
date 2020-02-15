@@ -21,6 +21,9 @@
         <entry name="useDefaultIcons" type="Bool">
             <default>true</default>
         </entry>
+        <entry name="iconChecking" type="String">
+            <default>../images/noupdate.svg</default>
+        </entry>
         <entry name="iconNoUpdate" type="String">
             <default>../images/noupdate.svg</default>
         </entry>

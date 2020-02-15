@@ -22,9 +22,27 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
-    id: compactRepresentation
+    function resolveSource(path) {
+        if (path.substring(0, 2).localeCompare("..") == 0) {
+            return Qt.resolvedUrl(".") + path;
+        }
+        return path;
+    }
+    function getIcon(type) {
+        if (type == main.update) {
+            return plasmoid.configuration.iconUpdate
+        }
+        if (type == main.errUpdate) {
+            return plasmoid.configuration.iconError
+        }
+        if (type == main.checking) {
+            return plasmoid.configuration.iconChecking
+        }
+        return plasmoid.configuration.iconNoUpdate
+    }
 
-    property string customIconSource: main.curType==main.noUpdate? plasmoid.configuration.iconNoUpdate.substring(0, 2).localeCompare("..")==0?Qt.resolvedUrl(".")+plasmoid.configuration.iconNoUpdate:plasmoid.configuration.iconNoUpdate:main.curType==main.update?plasmoid.configuration.iconUpdate.substring(0, 2).localeCompare("..")==0?Qt.resolvedUrl(".")+plasmoid.configuration.iconUpdate:plasmoid.configuration.iconUpdate:plasmoid.configuration.iconError.substring(0, 2).localeCompare("..")==0?Qt.resolvedUrl(".")+plasmoid.configuration.iconError:plasmoid.configuration.iconError
+    id: compactRepresentation
+    property string customIconSource: resolveSource(getIcon(main.curType))
      
     PlasmaCore.IconItem {
         id: customIcon

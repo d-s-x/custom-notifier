@@ -15,12 +15,13 @@ Item {
     anchors.fill: parent
 
     property int noUpdate:  0
-    property int update:    1
-    property int errUpdate: 2
+    property int checking:  1
+    property int update:    2
+    property int errUpdate: 3
     property int curType:   noUpdate
     property var mainIcon: plasmoid.configuration.iconNoUpdate
 
-    Plasmoid.status: (curType == noUpdate) ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
+    Plasmoid.status: (curType < update) ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
 
     
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
@@ -105,6 +106,9 @@ Item {
         else if (curType == errUpdate) {
             mainIcon = plasmoid.configuration.iconError
         }
+        else if (curType == checking) {
+            mainIcon = plasmoid.configuration.iconChecking
+        }
         else {
             mainIcon = plasmoid.configuration.iconNoUpdate
         }
@@ -116,6 +120,16 @@ Item {
         updateIcon()
     }
     
+    function startCheck() {
+        if (config.chkCommand.length > 0) {
+            curType = checking
+            executable.exec(config.chkCommand)
+        }
+        else {
+            updateTooltip(i18n('No check script define'))
+        }
+        plasmoidPassiveTimer.start()
+    }
     
     function startUpdate() {
         plasmoidPassiveTimer.stop()
@@ -141,13 +155,7 @@ Item {
         repeat: false
         interval: config.startTimeout
         onTriggered: {
-            if (config.chkCommand.length > 0) {
-                executable.exec(config.chkCommand)
-            }
-            else {
-				updateTooltip(i18n('No check script define'))
-			}
-			plasmoidPassiveTimer.start()
+            startCheck()
         }
     }    
     
@@ -156,14 +164,7 @@ Item {
         repeat: false
         interval: config.cycleTimeout
         onTriggered: {
-			//print('check')
-            if (config.chkCommand.length > 0) {
-                executable.exec(config.chkCommand)
-            }
-            else {
-				updateTooltip(i18n('No check script define'))
-			}
-			plasmoidPassiveTimer.start()
+			startCheck()
         }
     }
 }
