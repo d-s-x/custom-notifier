@@ -7,23 +7,23 @@ Plasmoid to be notified of updates with custom scripts.
 
 *Configuration*
 
-![custom-notifier-config](/uploads/fafd3f9500765aeeb050ce1441047a59/custom-notifier-config.png)
+![custom-notifier-config](img/custom-notifier-config.png)
 
 *No update, icon is hide*
 
-![custom-notifier-noupdate](/uploads/5ace0fdef58a990f2da26abd16aca22c/custom-notifier-noupdate.png)
+![custom-notifier-noupdate](img/custom-notifier-noupdate.png)
 
 *Updates availables*
 
-![custom-notifier-isupdate](/uploads/2a68fbae7a2c2e2268f2862c2c5ff486/custom-notifier-isupdate.png)
+![custom-notifier-isupdate](img/custom-notifier-isupdate.png)
 
 *Click on icon to start update*
 
-![custom-notifier-update](/uploads/7b14a8afb631972a73016d401d48ea64/custom-notifier-update.png)
+![custom-notifier-update](img/custom-notifier-update.png)
 
 *Check script return an error*
 
-![custom-notifier-error](/uploads/3fbab0484f098680a9bc8a6dacd17042/custom-notifier-error.png)
+![custom-notifier-error](img/custom-notifier-error.png)
 
 
 
